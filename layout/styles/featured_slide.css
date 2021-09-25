@@ -3,8 +3,8 @@
 #featured_slide_ {
     position: relative; /* important */
     display: block;
-    width: 1080px;
-    height: 720px;
+    width: 915px;
+    height: 610px;
     overflow: hidden; /* important */
     margin: 0 auto;
     padding: 5px;
@@ -14,7 +14,7 @@
 }
 
 #featured_slide_Content {
-    width: 1080px; /* important to be same as image width */
+    width: 915px; /* important to be same as image width */
     position: center;
     display: inline;
     margin: 0;
@@ -28,8 +28,8 @@
     float: left;
     margin: 0;
     padding: 0;
-    width: 1080px; /* important - must be same as image width and slider width */
-    height: 720px; /* important - must be same as image height and slider height */
+    width: 915px; /* important - must be same as image width and slider width */
+    height: 610px; /* important - must be same as image height and slider height */
     list-style: none;
 }
 
@@ -40,9 +40,9 @@
 
 .featured_slide_Image div.introtext {
     position: absolute;
-    top: 630px;
+    top: 520px;
     left: 0;
-    width: 1060px;
+    width: 895px;
     padding: 20px 10px;
     color: #fff;
     background-color: #000;
