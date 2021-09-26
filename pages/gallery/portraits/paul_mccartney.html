@@ -6,6 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
 	<link rel="stylesheet" href="../../../layout/styles/layout.css" type="text/css"/>
 	<script type="text/javascript" src="../../../layout/scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../layout/scripts/insert_fragments.js"></script>
 	<!-- prettyPhoto -->
 	<link rel="stylesheet" href="../../../layout/scripts/prettyphoto/prettyPhoto.css" type="text/css"/>
 	<script type="text/javascript" src="../../../layout/scripts/prettyphoto/jquery.prettyPhoto.js"></script>
@@ -22,67 +23,15 @@
 </head>
 <body id="top">
 	<div class="wrapper col1">
-		<div id="header">
-			<script type="text/javascript">$("#header").load("/pages/header.html");</script>
-		</div>
+		<script type="text/javascript">insert_header()</script>
 	</div>
 	<!-- ####################################################################################################### -->
 	<div class="wrapper col4">
-		<div id="container">
-			<div class="gallery">
-				<h2>Paul McCartney</h2>
-				<ul>
-					<li><a rel="prettyPhoto[gallery1]" href="../../../images/demo/gallery/portraits/paul_mccartney/full.jpeg"
-					       title="Full-sized image"><img
-							src="../../../images/demo/gallery/portraits/paul_mccartney/full_174.jpeg" alt="Full-sized image"/></a>
-					</li>
-					<li><a rel="prettyPhoto[gallery1]" href="../../../images/demo/gallery/portraits/paul_mccartney/fragment1.jpeg"
-					       title="Fragment 1"><img
-							src="../../../images/demo/gallery/portraits/paul_mccartney/fragment1_174.jpeg" alt="Fragment 1"/></a>
-					</li>
-					<li><a rel="prettyPhoto[gallery1]" href="../../../images/demo/gallery/portraits/paul_mccartney/fragment2.jpeg"
-					       title="Fragment 2"><img
-							src="../../../images/demo/gallery/portraits/paul_mccartney/fragment2_174.jpeg" alt="Fragment 2"/></a>
-					</li>
-					<li><a rel="prettyPhoto[gallery1]" href="../../../images/demo/gallery/portraits/paul_mccartney/fragment3.jpeg"
-					       title="Fragment 3"><img
-							src="../../../images/demo/gallery/portraits/paul_mccartney/fragment3_174.jpeg" alt="Fragment 3"/></a>
-					</li>
-					<li><a rel="prettyPhoto[gallery1]" href="../../../images/demo/gallery/portraits/paul_mccartney/fragment4.jpeg"
-					       title="Fragment 4"><img
-							src="../../../images/demo/gallery/portraits/paul_mccartney/fragment4_174.jpeg" alt="Fragment 4"/></a>
-					</li>
-					<li><a rel="prettyPhoto[gallery1]" href="../../../images/demo/gallery/portraits/paul_mccartney/fragment5.jpeg"
-					       title="Fragment 5"><img
-							src="../../../images/demo/gallery/portraits/paul_mccartney/fragment5_174.jpeg" alt="Fragment 5"/></a>
-					</li>
-					<li><a rel="prettyPhoto[gallery1]" href="../../../images/demo/gallery/portraits/paul_mccartney/fragment6.jpeg"
-					       title="Fragment 6"><img
-							src="../../../images/demo/gallery/portraits/paul_mccartney/fragment6_174.jpeg" alt="Fragment 6"/></a>
-					</li>
-					<li><a rel="prettyPhoto[gallery1]" href="../../../images/demo/gallery/portraits/paul_mccartney/fragment7.jpeg"
-					       title="Fragment 7"><img
-							src="../../../images/demo/gallery/portraits/paul_mccartney/fragment7_174.jpeg" alt="Fragment 7"/></a>
-					</li>
-					<li><a rel="prettyPhoto[gallery1]" href="../../../images/demo/gallery/portraits/paul_mccartney/fragment8.jpeg"
-					       title="Fragment 8"><img
-							src="../../../images/demo/gallery/portraits/paul_mccartney/fragment8_174.jpeg" alt="Fragment 8"/></a>
-					</li>
-					<li><a rel="prettyPhoto[gallery1]" href="../../../images/demo/gallery/portraits/paul_mccartney/fragment9.jpeg"
-					       title="Fragment 9"><img
-							src="../../../images/demo/gallery/portraits/paul_mccartney/fragment9_174.jpeg" alt="Fragment 9"/></a>
-					</li>
-				</ul>
-				<br class="clear"/>
-			</div>
-		</div>
+		<script type="text/javascript">insert_gallery_thumbnails("Paul McCartney", "portraits/paul_mccartney/")</script>
 	</div>
 	<!-- ####################################################################################################### -->
 	<div class="wrapper col5">
-		<div id="footer">
-			<p class="fl_left">Copyright &copy; 2021 - All Rights Reserved - <a href="#">AuthenticPaintings.store</a></p>
-			<br class="clear"/>
-		</div>
+		<script type="text/javascript">insert_footer()</script>
 	</div>
 </body>
 </html>

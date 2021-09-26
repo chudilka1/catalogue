@@ -6,6 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
 	<link rel="stylesheet" href="layout/styles/layout.css" type="text/css"/>
 	<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="layout/scripts/insert_fragments.js"></script>
 	<!-- s3slider -->
 	<script type="text/javascript" src="layout/scripts/jquery.s3slider.js"></script>
 	<script type="text/javascript">
@@ -20,9 +21,7 @@
 
 <body id="top">
 	<div class="wrapper col1">
-		<div id="header">
-			<script type="text/javascript">$("#header").load("/pages/header.html");</script>
-		</div>
+		<script type="text/javascript">insert_header()</script>
 	</div>
 	<!-- ####################################################################################################### -->
 	<div class="wrapper col2">
@@ -90,7 +89,7 @@
 	</div>
 	<!-- ####################################################################################################### -->
 	<div class="wrapper col5">
-		<script type="text/javascript">$(".wrapper.col5").load("/pages/footer.html");</script>
+		<script type="text/javascript">insert_footer()</script>
 	</div>
 </body>
 </html>
