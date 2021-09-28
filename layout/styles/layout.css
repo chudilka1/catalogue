@@ -322,6 +322,8 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
     display: inline-table;
     width: 99%;
     margin-top: 10px;
+    border: 1px solid #FFFF00;
+    border-collapse: collapse;
 }
 
 .gallery table thead tr th {

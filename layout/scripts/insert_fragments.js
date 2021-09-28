@@ -1,4 +1,4 @@
-const BASE_PATH_TO_GALLERY = "../../../images/demo/gallery/"
+const BASE_PATH_TO_GALLERY = "/images/demo/gallery/"
 
 function setTitle(title) {
     sessionStorage.setItem("title", title)
