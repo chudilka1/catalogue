@@ -22,6 +22,16 @@ body {
     text-align: justify;
 }
 
+.font16 {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
 .bold {
     font-weight: bold;
 }
@@ -98,7 +108,7 @@ div.wrapper {
 div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, div.wrapper h6 {
     margin: 0 0 15px 0;
     padding: 0;
-    font-size: 20px;
+    font-size: 26px;
     font-weight: normal;
     line-height: normal;
 }
@@ -132,14 +142,14 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 #header, #breadcrumb, #container, .gallery, #footer {
     display: block;
     position: relative;
-    width: 975px;
+    width: 970px;
     margin: 0 auto;
 }
 
 /* ----------------------------------------------Header------------------------------------- */
 
 #header {
-    padding: 30px 0;
+    padding: 15px 0;
     z-index: 1000;
 }
 
@@ -189,7 +199,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 /* ----------------------------------------------Content------------------------------------- */
 
 #container {
-    padding: 30px 0;
+    padding: 10px 0;
     border-bottom: 1px dotted #666;
 }
 
@@ -266,15 +276,15 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 /* ----------------------------------------------Gallery------------------------------------- */
 
 .gallery {
-    padding: 20px 0 30px 0;
+    padding: 10px 0 10px 0;
 }
 
 .wrapper .gallery h2 {
     display: block;
     text-align: center;
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
     padding: 0;
-    color: #2C2C2C;
+    color: #CCCCCC;
     background-color: #000000;
     font-size: 56px;
     text-transform: uppercase;
@@ -303,6 +313,28 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 
 .gallery ul li.last {
     margin-right: 0;
+}
+.gallery table {
+    display: inline-table;
+    width: 99%;
+    margin-top: 10px;
+}
+
+.gallery table thead tr th {
+    border: 1px solid #FFFF00;
+}
+
+.gallery table tbody tr td {
+    border: 1px solid #FFFF00;
+}
+
+/*table td.fitwidth {
+    white-space: nowrap;
+}*/
+
+td.fitwidth {
+    width: 200px;
+    white-space: nowrap;
 }
 
 /* ----------------------------------------------Column------------------------------------- */
