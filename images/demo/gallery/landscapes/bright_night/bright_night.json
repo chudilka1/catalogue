@@ -1,7 +1,8 @@
 {
-  "name": "Bright Night",
+  "title": "Bright Night",
   "author": "Artist's Name",
   "size": "100 x 80",
   "materials": "Oil",
-  "year": 2000
+  "year": 2000,
+  "description": "Description"
 }

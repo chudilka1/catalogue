@@ -1,7 +1,8 @@
 {
-  "name": "John the Baptist",
+  "title": "John the Baptist",
   "author": "Artist's Name",
   "size": "100 x 60",
   "materials": "Oil",
-  "year": 2010
+  "year": 2010,
+  "description": "Description"
 }

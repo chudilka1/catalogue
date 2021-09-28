@@ -8,7 +8,7 @@
 	<script type="text/javascript" src="../layout/scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="../layout/scripts/insert_fragments.js"></script>
 </head>
-<body id="top">
+<body id="top" onload="populate_details_page(getTitle(), getGenre(), getCollectionName())">
 	<div class="wrapper col1">
 		<script type="text/javascript">insert_header()</script>
 	</div>
@@ -16,32 +16,22 @@
 	<div class="wrapper col4">
 		<div id="container">
 			<div id="content" class="font16">
-				<h1 class="yellow">Paul McCartney</h1>
+				<h1 id="title" class="yellow">Title</h1>
 				<img class="imgr" src="../images/demo/imgr.gif" alt="" width="125" height="125"/>
-				<p>Aliquatjusto quisque nam consequat doloreet vest orna partur scetur portortis nam. Metadipiscing eget facilis
-					elit sagittis felisi eger id justo maurisus convallicitur.</p>
-				<p>Dapiensociis <a href="#">temper donec auctortortis cumsan</a> et curabitur condis lorem loborttis leo.
-					Ipsumcommodo libero nunc at in velis tincidunt pellentum tincidunt vel lorem.</p>
+				<p id="author">Author: .</p>
+				<p id="size">Size: .</p>
+				<p id="materials">Materials: .</p>
+				<p id="year">Year: .</p>
 				<img class="imgl" src="../images/demo/imgl.gif" alt="" width="125" height="125"/>
-				<p>This is a W3C compliant free website template from <a href="http://www.os-templates.com/"
-				                                                         title="Free Website Templates">OS Templates</a>. This
-					template is distributed using a <a href="http://www.os-templates.com/template-terms">Website Template
-						Licence</a>.</p>
-				<p>You can use and modify the template for both personal and commercial use. You must keep all copyright
-					information and credit links in the template and associated files. For more CSS templates visit <a
-							href="http://www.os-templates.com/">Free Website Templates</a>.</p>
-				<p>Portortornec condimenterdum eget consectetuer condis consequam pretium pellus sed mauris enim. Puruselit
-					mauris nulla hendimentesque elit semper nam a sapien urna sempus.</p>
+				<p id="description">Description: .</p>
 			</div>
 			<div id="column">
 				<div id="featured">
 					<ul>
 						<li>
-							<h2>Indonectetus facilis leonib</h2>
+							<h2>Other interesting</h2>
 							<p class="imgholder"><img src="../images/demo/240x90.gif" alt=""/></p>
-							<p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna. Urnaultrices quis
-								curabitur phasellentesque congue magnis vestibulum quismodo nulla et feugiat. Adipisciniapellentum leo
-								ut consequam ris felit elit id nibh sociis malesuada.</p>
+							<p>Short description</p>
 							<p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
 						</li>
 					</ul>

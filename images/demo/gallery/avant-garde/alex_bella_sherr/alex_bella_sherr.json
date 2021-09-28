@@ -1,7 +1,8 @@
 {
-  "name": "Alex & Bella Sherr",
+  "title": "Alex & Bella Sherr",
   "author": "Artist's Name",
   "size": "100 x 90",
   "materials": "Oil",
-  "year": 2005
+  "year": 2005,
+  "description": "Description"
 }
