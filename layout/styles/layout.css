@@ -50,6 +50,10 @@ body {
     list-style-type: none;
 }
 
+.yellow {
+    color: #FFFF00;
+}
+
 .clear {
     clear: both;
 }
