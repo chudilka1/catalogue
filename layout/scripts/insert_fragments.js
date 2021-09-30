@@ -101,8 +101,10 @@ function insert_genre_tiles_for(genre, sourceNames) {
                     let pathToSource = BASE_PATH_TO_GALLERY + genre + "/" + sourceName;
                     $('.gallery ul').append(
                         $('<li>').append(
-                            $('<a>').attr('href', sourceName + ".html").attr('title', sourceName).append(
-                                $('<img>').attr('src', pathToSource + "/full_174.jpeg").attr('alt', sourceName))));
+                            $('<a>').attr('href', window.location.pathname.replace("index.html", sourceName + ".html"))
+                                .attr('title', sourceName).append(
+                                $('<img>').attr('src', pathToSource + "/full_174.jpeg")
+                                    .attr('alt', sourceName))));
                 }
             )
         });
