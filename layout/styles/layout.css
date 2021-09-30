@@ -78,6 +78,10 @@ a {
     float: right;
 }
 
+.space_after {
+    margin-right: 10px;
+}
+
 img {
     display: block;
     margin: 0;
