@@ -24,6 +24,18 @@ function getCollectionName() {
     return sessionStorage.getItem("collectionName");
 }
 
+function insert_head_common() {
+    $.get("/pages/head_common.html", function (data) {
+        $('head').append(data);
+    });
+}
+
+function insert_head_pretty_photo() {
+    $.get("/pages/head_pretty_photo.html", function (data) {
+        $('head').append(data);
+    });
+}
+
 function insert_header() {
     $(".wrapper.col1").load("/pages/header.html");
 }

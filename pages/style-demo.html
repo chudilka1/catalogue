@@ -2,13 +2,10 @@
 		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<title>Authentic Paintings</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" sizes="32x27" href="/images/favicon_32_32.png">
-	<link rel="stylesheet" href="../layout/styles/layout.css" type="text/css"/>
-	<script type="text/javascript" src="../layout/scripts/jquery.min.js"></script>
-	<script type="text/javascript" src="../layout/scripts/insert_fragments.js"></script>
+	<base href="../"/>
+	<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="layout/scripts/insert_fragments.js"></script>
+	<script type="text/javascript">insert_head_common()</script>
 </head>
 <body id="top" onload="populate_details_page(getTitle(), getGenre(), getCollectionName())">
 	<div class="wrapper col1">
@@ -19,12 +16,12 @@
 		<div id="container">
 			<div id="content" class="font16">
 				<h1 id="title" class="yellow">Title</h1>
-				<img class="imgr" src="../images/demo/imgr.gif" alt="" width="125" height="125"/>
+				<img class="imgr" src="images/demo/imgr.gif" alt="" width="125" height="125"/>
 				<p id="author">Author: .</p>
 				<p id="size">Size: .</p>
 				<p id="materials">Materials: .</p>
 				<p id="year">Year: .</p>
-				<img class="imgl" src="../images/demo/imgl.gif" alt="" width="125" height="125"/>
+				<img class="imgl" src="images/demo/imgl.gif" alt="" width="125" height="125"/>
 				<p id="description">Description: .</p>
 			</div>
 			<div id="column">
@@ -32,7 +29,7 @@
 					<ul>
 						<li>
 							<h2>Other interesting</h2>
-							<p class="imgholder"><img src="../images/demo/240x90.gif" alt=""/></p>
+							<p class="imgholder"><img src="images/demo/240x90.gif" alt=""/></p>
 							<p>Short description</p>
 							<p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
 						</li>
