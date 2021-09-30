@@ -1,12 +1,4 @@
 @charset "utf-8";
-/*
-Template Name: Gallerised
-Author: <a href="http://www.os-templates.com/">OS Templates</a>
-Author URI: http://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: http://www.os-templates.com/template-terms
-File: Navigation CSS
-*/
 
 #topnav {
     display: block;
@@ -29,6 +21,7 @@ File: Navigation CSS
 
 #topnav li li {
     margin-right: 0;
+    float: left;
 }
 
 #topnav li span {
@@ -67,7 +60,7 @@ File: Navigation CSS
 }
 
 #topnav li li a:link, #topnav li li a:visited {
-    width: 150px;
+    width: 90px;
     float: none;
     margin: 0;
     padding: 7px 10px;
