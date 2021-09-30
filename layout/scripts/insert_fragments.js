@@ -93,6 +93,21 @@ function populate_gallery_table_for(genre, collectionName) {
         });
 }
 
+function insert_genre_tiles_for(genre, sourceNames) {
+    $(".wrapper.col4").load("/pages/genre_tiles.html",
+        function () {
+            $('.gallery h2').text(genre);
+            $(sourceNames).each(function (index, sourceName) {
+                    let pathToSource = BASE_PATH_TO_GALLERY + genre + "/" + sourceName;
+                    $('.gallery ul').append(
+                        $('<li>').append(
+                            $('<a>').attr('href', sourceName + ".html").attr('title', sourceName).append(
+                                $('<img>').attr('src', pathToSource + "/full_174.jpeg").attr('alt', sourceName))));
+                }
+            )
+        });
+}
+
 // access to details page is possible only from gallery page (with fragments)
 // so by this time the arguments should be saved in localStorage
 function populate_details_page(title, genre, collectionName) {
