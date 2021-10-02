@@ -6,19 +6,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="layout/styles/layout.css" type="text/css"/>
+	<link rel="stylesheet" href="layout/styles/featured_slide.css" type="text/css"/>
 	<link rel="icon" type="image/png" sizes="32x27" href="images/favicon_32_32.png">
 	<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="layout/scripts/insert_fragments.js"></script>
-	<!-- s3slider -->
+	<script type="text/javascript" src="layout/scripts/insert_featured_slides.js"></script>
 	<script type="text/javascript" src="layout/scripts/jquery.s3slider.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$('#featured_slide_').s3Slider({
-				timeOut: 4000
-			});
-		});
-	</script>
-	<!-- / s3slider -->
 </head>
 
 <body id="top">
@@ -27,67 +20,13 @@
 	</div>
 	<!-- ####################################################################################################### -->
 	<div class="wrapper col2">
-		<div id="featured_slide_">
-			<ul id="featured_slide_Content">
-				<li class="featured_slide_Image"><a href="pages/gallery/portraits/paul_mccartney.html"><img
-						src="images/demo/homepage/Paul_McCartney_750_610.jpg" alt=""/></a>
-					<div class="introtext">
-						<h2>Paul McCartney</h2>
-						<p>Painting by Artis. 3.7% of full size. For more works visit category
-							<a href="pages/gallery/portraits/index.html">Portraits</a>.
-						</p>
-					</div>
-				</li>
-				<li class="featured_slide_Image"><a href="pages/gallery/religion/john_the_baptist.html"><img
-						src="images/demo/homepage/John_Baptist_453_610.jpg" alt=""/></a>
-					<div class="introtext">
-						<h2>John the Baptist</h2>
-						<p>Unique painting by Artist. 3% of full size. For more works visit category
-							<a href="pages/gallery/religion/index.html">Religion</a>.
-						</p>
-					</div>
-				</li>
-				<li class="featured_slide_Image"><a href="pages/gallery/avant-garde/alex_bella_sherr.html"><img
-						src="images/demo/homepage/Alex_Bella_Sher_770_610.jpg" alt=""/></a>
-					<div class="introtext">
-						<h2>Alex & Bella Sherr</h2>
-						<p>Painting by Artis. 3.5% of full size. For more works visit category
-							<a href="pages/gallery/avant-garde/index.html">Avant-garde</a>.
-						</p>
-					</div>
-				</li>
-				<li class="featured_slide_Image"><a href="pages/gallery/landscapes/bright_night.html"><img
-						src="images/demo/homepage/Bright_Night_915_542.jpg" alt=""/></a>
-					<div class="introtext">
-						<h2>Bright Night</h2>
-						<p>Landscape by Artis. 4.6% of full size. For more works visit category
-							<a href="pages/gallery/landscapes/index.html">Landscapes</a>.
-						</p>
-					</div>
-				</li>
-				<li class="featured_slide_Image"><a href="pages/gallery/avant-garde/nearby_samovar.html"><img
-						src="images/demo/homepage/Nearby_Samovar_453_610.jpg" alt=""/></a>
-					<div class="introtext">
-						<h2>Nearby Samovar</h2>
-						<p>Painting by Artis. 3.8% of full size. For more works visit category
-							<a href="pages/gallery/avant-garde/index.html">Avant-garde</a>.
-						</p>
-					</div>
-				</li>
-				<li class="featured_slide_Image"><a href="pages/gallery/avant-garde/angelika.html"><img
-						src="images/demo/homepage/Angelika_453_610.jpg" alt=""/></a>
-					<div class="introtext">
-						<h2>Angelika</h2>
-						<p>Painting by Artis. 3.8% of full size. For more works visit category
-							<a href="pages/gallery/avant-garde/index.html">Avant-garde</a>.
-						</p>
-					</div>
-				</li>
-				<li class="clear featured_slide_Image">
-					<!-- Leave This Empty -->
-				</li>
-			</ul>
-		</div>
+		<script type="text/javascript">insert_homepage_slides_for(
+				[
+					["portraits", ["paul_mcCartney"]],
+					["religion", ["john_the_baptist"]],
+					["avant-garde", ["angelika", "alex_bella_sherr", "nearby_samovar"]]
+				]
+		)</script>
 	</div>
 	<!-- ####################################################################################################### -->
 	<div class="wrapper col5">
