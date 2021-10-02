@@ -4,8 +4,10 @@
 <head>
 	<base href="../../../"/>
 	<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+	<script type="module" src="layout/scripts/modules/utility_methods.js"></script>
 	<script type="module" src="layout/scripts/insert_fragments.js"></script>
 	<script type="module">insert_head_common()</script>
+	<script type="module">insert_head_pretty_photo()</script>
 </head>
 <body id="top">
 	<div class="wrapper col1">
@@ -13,13 +15,7 @@
 	</div>
 	<!-- ####################################################################################################### -->
 	<div class="wrapper col4">
-		<script
-				type="module">insert_genre_tiles_for("avant-garde", [
-			"on_the_hill",
-			"angelika",
-			"alex_bella_sherr",
-			"nearby_samovar"
-		])</script>
+		<script type="module">insert_gallery_thumbnails("avant-garde", "on_the_hill")</script>
 	</div>
 	<!-- ####################################################################################################### -->
 	<div class="wrapper col5">
