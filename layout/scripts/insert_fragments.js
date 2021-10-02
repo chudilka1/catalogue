@@ -46,9 +46,10 @@ window.insert_footer = function insert_footer() {
     $(".wrapper.col5").load("/pages/footer.html");
 }
 
-window.insert_gallery_thumbnails = function insert_gallery_thumbnails(title, genre, collectionName) {
+window.insert_gallery_thumbnails = function insert_gallery_thumbnails(genre, collectionName) {
+    let title = normalizeText(collectionName);
 
-    setTitle(normalizeText(collectionName));
+    setTitle(title);
     setGenre(genre);
     setCollectionName(collectionName);
 
