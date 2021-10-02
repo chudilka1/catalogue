@@ -10,7 +10,7 @@ function insert_featured_slide_for_source(genre, sourceNames) {
         $('#featured_slide_Content').append(
             $('<li>').addClass("featured_slide_Image").append(
                 $('<a>').attr('href', "/pages/gallery/" + genre + "/" + sourceName.toLowerCase() + ".html").append(
-                    $('<img>').attr('src', pathToSource + "/homepage.jpg")
+                    $('<img>').attr('src', pathToSource + "/homepage.jpeg")
                         .attr('alt', sourceName)),
                 $('<div>').addClass("introtext").append(
                     $('<h2>').text(h2Text),
