@@ -1,16 +1,6 @@
+import {normalizeText} from "./modules/utility_methods.js";
+
 const PATH_TO_GALLERY = "/images/demo/gallery/"
-
-function normalizeText(sourceName) {
-    let i, titleWords = sourceName.split('_');
-    for (i = 0; i < titleWords.length; i++) {
-        titleWords[i] = titleWords[i].charAt(0).toUpperCase() + titleWords[i].slice(1);
-    }
-    return titleWords.join(' ');
-}
-
-String.prototype.capitalize = function () {
-    return this.charAt(0).toUpperCase() + this.slice(1);
-}
 
 function insert_featured_slide_for_source(genre, sourceNames) {
     $(sourceNames).each(function (i, sourceName) {
@@ -41,7 +31,7 @@ function load_featured_slide_dependency() {
     console.debug("Featured slides dependency reloaded")
 }
 
-function insert_homepage_slides_for(arrayOfArguments) {
+window.insert_homepage_slides_for = function insert_homepage_slides_for(arrayOfArguments) {
     console.debug("Inserting homepage slides")
     $(".wrapper.col2").load("/pages/homepage_slides.html",
         function () {

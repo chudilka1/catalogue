@@ -1,3 +1,5 @@
+import {normalizeText} from "./modules/utility_methods.js";
+
 const BASE_PATH_TO_GALLERY = "/images/demo/gallery/"
 
 function setTitle(title) {
@@ -24,28 +26,29 @@ function getCollectionName() {
     return sessionStorage.getItem("collectionName");
 }
 
-function insert_head_common() {
+window.insert_head_common = function insert_head_common() {
     $.get("/pages/head_common.html", function (data) {
         $('head').append(data);
     });
 }
 
-function insert_head_pretty_photo() {
+window.insert_head_pretty_photo = function insert_head_pretty_photo() {
     $.get("/pages/head_pretty_photo.html", function (data) {
         $('head').append(data);
     });
 }
 
-function insert_header() {
+window.insert_header = function insert_header() {
     $(".wrapper.col1").load("/pages/header.html");
 }
 
-function insert_footer() {
+window.insert_footer = function insert_footer() {
     $(".wrapper.col5").load("/pages/footer.html");
 }
 
-function insert_gallery_thumbnails(title, genre, collectionName) {
-    setTitle(title);
+window.insert_gallery_thumbnails = function insert_gallery_thumbnails(title, genre, collectionName) {
+
+    setTitle(normalizeText(collectionName));
     setGenre(genre);
     setCollectionName(collectionName);
 
@@ -93,7 +96,7 @@ function populate_gallery_table_for(genre, collectionName) {
         });
 }
 
-function insert_genre_tiles_for(genre, sourceNames) {
+window.insert_genre_tiles_for = function insert_genre_tiles_for(genre, sourceNames) {
     $(".wrapper.col4").load("/pages/genre_tiles.html",
         function () {
             $('.gallery h2').text(genre);

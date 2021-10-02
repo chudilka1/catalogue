@@ -4,21 +4,22 @@
 <head>
 	<base href="../../../"/>
 	<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
-	<script type="text/javascript" src="layout/scripts/insert_fragments.js"></script>
-	<script type="text/javascript">insert_head_common()</script>
-	<script type="text/javascript">insert_head_pretty_photo()</script>
+	<script type="module" src="layout/scripts/modules/utility_methods.js"></script>
+	<script type="module" src="layout/scripts/insert_fragments.js"></script>
+	<script type="module">insert_head_common()</script>
+	<script type="module">insert_head_pretty_photo()</script>
 </head>
 <body id="top">
 	<div class="wrapper col1">
-		<script type="text/javascript">insert_header()</script>
+		<script type="module">insert_header()</script>
 	</div>
 	<!-- ####################################################################################################### -->
 	<div class="wrapper col4">
-		<script type="text/javascript">insert_gallery_thumbnails("Angelika", "avant-garde", "angelika")</script>
+		<script type="module">insert_gallery_thumbnails("Angelika", "avant-garde", "angelika")</script>
 	</div>
 	<!-- ####################################################################################################### -->
 	<div class="wrapper col5">
-		<script type="text/javascript">insert_footer()</script>
+		<script type="module">insert_footer()</script>
 	</div>
 </body>
 </html>

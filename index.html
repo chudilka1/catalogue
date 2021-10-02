@@ -9,18 +9,18 @@
 	<link rel="stylesheet" href="layout/styles/featured_slide.css" type="text/css"/>
 	<link rel="icon" type="image/png" sizes="32x27" href="images/favicon_32_32.png">
 	<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
-	<script type="text/javascript" src="layout/scripts/insert_fragments.js"></script>
-	<script type="text/javascript" src="layout/scripts/insert_featured_slides.js"></script>
+	<script type="module" src="layout/scripts/insert_fragments.js"></script>
+	<script type="module" src="layout/scripts/insert_featured_slides.js"></script>
 	<script type="text/javascript" src="layout/scripts/jquery.s3slider.js"></script>
 </head>
 
 <body id="top">
 	<div class="wrapper col1">
-		<script type="text/javascript">insert_header()</script>
+		<script type="module">insert_header()</script>
 	</div>
 	<!-- ####################################################################################################### -->
 	<div class="wrapper col2">
-		<script type="text/javascript">insert_homepage_slides_for(
+		<script type="module">insert_homepage_slides_for(
 				[
 					["portraits", ["paul_mcCartney"]],
 					["religion", ["john_the_baptist"]],
@@ -30,7 +30,7 @@
 	</div>
 	<!-- ####################################################################################################### -->
 	<div class="wrapper col5">
-		<script type="text/javascript">insert_footer()</script>
+		<script type="module">insert_footer()</script>
 	</div>
 </body>
 </html>

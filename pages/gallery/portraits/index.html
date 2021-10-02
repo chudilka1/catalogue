@@ -4,22 +4,22 @@
 <head>
 	<base href="../../../"/>
 	<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
-	<script type="text/javascript" src="layout/scripts/insert_fragments.js"></script>
-	<script type="text/javascript">insert_head_common()</script>
+	<script type="module" src="layout/scripts/insert_fragments.js"></script>
+	<script type="module">insert_head_common()</script>
 </head>
 <body id="top">
 	<div class="wrapper col1">
-		<script type="text/javascript">insert_header()</script>
+		<script type="module">insert_header()</script>
 	</div>
 	<!-- ####################################################################################################### -->
 	<div class="wrapper col4">
 		<div id="container">
-			<script type="text/javascript">insert_genre_tiles_for("portraits", ["paul_mccartney"])</script>
+			<script type="module">insert_genre_tiles_for("portraits", ["paul_mccartney"])</script>
 		</div>
 	</div>
 	<!-- ####################################################################################################### -->
 	<div class="wrapper col5">
-		<script type="text/javascript">insert_footer()</script>
+		<script type="module">insert_footer()</script>
 	</div>
 </body>
 </html>
