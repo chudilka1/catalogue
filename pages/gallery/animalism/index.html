@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<base href="../../../"/>
+	<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+	<script type="module" src="layout/scripts/insert_fragments.js"></script>
+	<script type="module">insert_head_common()</script>
+</head>
+<body id="top">
+	<div class="wrapper col1">
+		<script type="module">insert_header()</script>
+	</div>
+	<!-- ####################################################################################################### -->
+	<div class="wrapper col4">
+		<div id="container">
+			<script type="module">insert_genre_tiles_for("animalism", [
+				"blot",
+				"tanzania",
+				"horse_and_cobra",
+				"buffy",
+				"george",
+				"white_owl"
+			])</script>
+		</div>
+	</div>
+	<!-- ####################################################################################################### -->
+	<div class="wrapper col5">
+		<script type="module">insert_footer()</script>
+	</div>
+</body>
+</html>
