@@ -115,7 +115,7 @@ window.insert_genre_tiles_for = function insert_genre_tiles_for(genre, sourceNam
 
 // access to details page is possible only from gallery page (with fragments)
 // so by this time the arguments should be saved in localStorage
-function populate_details_page(title, genre, collectionName) {
+window.populate_details_page = function populate_details_page(title, genre, collectionName) {
     $.getJSON(BASE_PATH_TO_GALLERY + genre + "/" + collectionName + "/" + collectionName + ".json")
         .done(function (data) {
             $('#title').text(data.title);
