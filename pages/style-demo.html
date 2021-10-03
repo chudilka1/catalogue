@@ -5,9 +5,10 @@
 	<base href="../"/>
 	<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
 	<script type="module" src="layout/scripts/insert_fragments.js"></script>
+	<script type="module" src="layout/scripts/insert_details.js"></script>
 	<script type="module">insert_head_common()</script>
 </head>
-<body id="top" onload="populate_details_page(getTitle(), getGenre(), getCollectionName())">
+<body id="top">
 	<div class="wrapper col1">
 		<script type="module">insert_header()</script>
 	</div>
@@ -15,21 +16,20 @@
 	<div class="wrapper col4">
 		<div id="container">
 			<div id="content" class="font16">
-				<h1 id="title" class="yellow">Title</h1>
-				<img class="imgr" src="images/demo/imgr.gif" alt="" width="125" height="125"/>
+				<h1 id="title" class="yellow center">Title</h1>
 				<p id="author">Author: .</p>
 				<p id="size">Size: .</p>
 				<p id="materials">Materials: .</p>
 				<p id="year">Year: .</p>
-				<img class="imgl" src="images/demo/imgl.gif" alt="" width="125" height="125"/>
 				<p id="description">Description: .</p>
+				<script type="module">insert_details_page()</script>
 			</div>
 			<div id="column">
 				<div id="featured">
 					<ul>
 						<li>
-							<h2>Other interesting</h2>
-							<p class="imgholder"><img src="images/demo/240x90.gif" alt=""/></p>
+							<h2>Other Authentics</h2>
+							<p class="imgholder"></p>
 							<p>Short description</p>
 							<p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
 						</li>
@@ -41,7 +41,7 @@
 	</div>
 	<!-- ####################################################################################################### -->
 	<div class="wrapper col5">
-		<script type="text/javascript">insert_footer()</script>
+		<script type="module">insert_footer()</script>
 	</div>
 </body>
 </html>
