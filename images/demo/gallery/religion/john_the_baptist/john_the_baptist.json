@@ -1,8 +1,11 @@
 {
-  "title": "John the Baptist",
-  "author": "Artist's Name",
-  "size": "100 x 60",
-  "materials": "Oil",
-  "year": 2010,
-  "description": "Description"
+  "sourceName": "john_the_baptist",
+  "title": "Иоанн Креститель",
+  "genre": "religion",
+  "author": "Melnikov Alexander",
+  "size": "80х60",
+  "year": "2001",
+  "materials": "canvas, oil",
+  "description": ".",
+  "price": "5000"
 }

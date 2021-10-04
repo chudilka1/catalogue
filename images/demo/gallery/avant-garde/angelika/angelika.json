@@ -1,8 +1,11 @@
 {
-  "title": "Angelika",
-  "author": "Artist's Name",
-  "size": "80 x 50",
-  "materials": "Oil",
-  "year": 2015,
-  "description": "Description"
+  "sourceName": "angelika",
+  "title": "Анжелика",
+  "genre": "avant-garde",
+  "author": "Cherkasova Iren",
+  "size": "80х60",
+  "year": "2002",
+  "materials": "canvas, oil",
+  "description": ".",
+  "price": "5000"
 }

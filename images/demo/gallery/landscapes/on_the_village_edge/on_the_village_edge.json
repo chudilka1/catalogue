@@ -1,8 +1,11 @@
 {
-  "title": "On The Village Age",
-  "author": "Artist's Name",
-  "size": "80 x 50",
-  "materials": "Oil",
-  "year": 2015,
-  "description": "Description"
+  "sourceName": "on_the_village_edge",
+  "title": "На краю села",
+  "genre": "landscapes",
+  "author": "Sokolovsky Oleg",
+  "size": "30х40",
+  "year": "2016",
+  "materials": "canvas, oil",
+  "description": ".",
+  "price": "450"
 }

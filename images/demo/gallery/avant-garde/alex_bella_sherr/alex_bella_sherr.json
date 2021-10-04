@@ -1,8 +1,11 @@
 {
-  "title": "Alex & Bella Sherr",
-  "author": "Artist's Name",
-  "size": "100 x 90",
-  "materials": "Oil",
-  "year": 2005,
-  "description": "Description"
+  "sourceName": "alex_bella_sherr",
+  "title": "Алекс и Белла Шерр",
+  "genre": "avant-garde",
+  "author": "Savitskaya Alla",
+  "size": "80х100",
+  "year": "2017",
+  "materials": "canvas, oil",
+  "description": ".",
+  "price": "850"
 }

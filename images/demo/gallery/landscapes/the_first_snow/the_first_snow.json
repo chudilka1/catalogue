@@ -1,8 +1,11 @@
 {
-  "title": "The First Snow",
-  "author": "Artist's Name",
-  "size": "80 x 50",
-  "materials": "Oil",
-  "year": 2015,
-  "description": "Description"
+  "sourceName": "the_first_snow",
+  "title": "Первый снег",
+  "genre": "landscapes",
+  "author": "Sokolovsky Oleg",
+  "size": "40х60",
+  "year": "2019",
+  "materials": "canvas, oil",
+  "description": ".",
+  "price": "850"
 }

@@ -62,7 +62,8 @@ function load_pretty_photo() {
 function populate_gallery_table_for(genre, collectionName) {
     $.getJSON(BASE_PATH_TO_GALLERY + genre + "/" + collectionName + "/" + collectionName + ".json")
         .done(function (data) {
-            $('#title').text(data.title);
+            let title = normalizeText(collectionName);
+            $('#title').text(title);
             $('#author').text(data.author);
             $('#size').text(data.size);
             $('#materials').text(data.materials);

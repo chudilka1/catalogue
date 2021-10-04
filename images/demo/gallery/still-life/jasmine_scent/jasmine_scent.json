@@ -1,8 +1,11 @@
 {
-  "title": "Jasmine Scent",
-  "author": "Artist's Name",
-  "size": "100 x 60",
-  "materials": "Oil",
-  "year": 2010,
-  "description": "Description"
+  "sourceName": "jasmine_scent",
+  "title": "Запах жасмина",
+  "genre": "still-life",
+  "author": "Shved Eugenia",
+  "size": "40х30",
+  "year": "2020",
+  "materials": "canvas, oil",
+  "description": ".",
+  "price": "1900"
 }

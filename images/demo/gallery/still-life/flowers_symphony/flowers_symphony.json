@@ -1,8 +1,11 @@
 {
-  "title": "Flower's Symphony",
-  "author": "Artist's Name",
-  "size": "100 x 60",
-  "materials": "Oil",
-  "year": 2010,
-  "description": "Description"
+  "sourceName": "flowers_symphony",
+  "title": "Цветочная симфония",
+  "genre": "still-life",
+  "author": "Osmak Igor",
+  "size": "70х90",
+  "year": "2010",
+  "materials": "canvas, oil",
+  "description": ".",
+  "price": "2900"
 }

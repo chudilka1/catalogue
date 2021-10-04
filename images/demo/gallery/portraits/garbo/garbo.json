@@ -1,8 +1,11 @@
 {
-  "title": "Garbo",
-  "author": "Artist's Name",
-  "size": "100 x 80",
-  "materials": "Oil, ropes",
-  "year": 2005,
-  "description": "Description"
+  "sourceName": "garbo",
+  "title": "Таинственная Гарбо",
+  "genre": "portraits",
+  "author": "Savitskaya Alla",
+  "size": "80х60",
+  "year": "2016",
+  "materials": "canvas, oil",
+  "description": ".",
+  "price": "550"
 }

@@ -1,8 +1,11 @@
 {
-  "title": "Tanzania",
-  "author": "Artist's Name",
-  "size": "80 x 50",
-  "materials": "Oil",
-  "year": 2015,
-  "description": "Description"
+  "sourceName": "tanzania",
+  "title": "Танзания",
+  "genre": "animalism",
+  "author": "Kukharskiy Igor",
+  "size": "70х70",
+  "year": "2013",
+  "materials": "canvas, oil",
+  "description": ".",
+  "price": "1000"
 }

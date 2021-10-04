@@ -1,8 +1,11 @@
 {
-  "title": "Blot",
-  "author": "Artist's Name",
-  "size": "80 x 50",
-  "materials": "Oil",
-  "year": 2015,
-  "description": "Description"
+  "sourceName": "blot",
+  "title": "Клякса",
+  "genre": "animalism",
+  "author": "Fudzita Alyona",
+  "size": "40х40",
+  "year": "2020",
+  "materials": "canvas, oil",
+  "description": ".",
+  "price": "200"
 }

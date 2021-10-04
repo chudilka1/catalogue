@@ -1,8 +1,11 @@
 {
-  "title": "Big Shell",
-  "author": "Artist's Name",
-  "size": "100 x 60",
-  "materials": "Oil",
-  "year": 2010,
-  "description": "Description"
+  "sourceName": "big_shell",
+  "title": "Большая ракушка",
+  "genre": "still-life",
+  "author": "Kalmykov Alexandr",
+  "size": "50х45",
+  "year": "2010",
+  "materials": "canvas, oil",
+  "description": ".",
+  "price": "850"
 }

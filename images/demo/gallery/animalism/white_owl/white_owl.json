@@ -1,8 +1,11 @@
 {
-  "title": "White Owl",
-  "author": "Artist's Name",
-  "size": "80 x 50",
-  "materials": "Oil",
-  "year": 2015,
-  "description": "Description"
+  "sourceName": "white_owl",
+  "title": "Белая сова",
+  "genre": "animalism",
+  "author": "Didukh Natalia",
+  "size": "30х30",
+  "year": "2021",
+  "materials": "canvas, oil",
+  "description": ".",
+  "price": "200"
 }

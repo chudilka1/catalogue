@@ -1,8 +1,11 @@
 {
-  "title": "Blue Plastic Bag",
-  "author": "Artist's Name",
-  "size": "80 x 50",
-  "materials": "Oil",
-  "year": 2015,
-  "description": "Description"
+  "sourceName": "blue_plastic_bag",
+  "title": "Голубой пластиковый пакет",
+  "genre": "hyperrealism",
+  "author": "Rojas Mario",
+  "size": "40х21",
+  "year": "2017",
+  "materials": "canvas, oil",
+  "description": ".",
+  "price": "850"
 }

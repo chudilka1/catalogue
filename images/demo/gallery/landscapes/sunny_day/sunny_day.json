@@ -1,8 +1,11 @@
 {
-  "title": "Sunny day",
-  "author": "Artist's Name",
-  "size": "80 x 50",
-  "materials": "Oil",
-  "year": 2015,
-  "description": "Description"
+  "sourceName": "sunny_day",
+  "title": "Солнечный день",
+  "genre": "landscapes",
+  "author": "Sokolovsky Oleg",
+  "size": "35х50",
+  "year": "2009",
+  "materials": "canvas, oil",
+  "description": ".",
+  "price": "600"
 }

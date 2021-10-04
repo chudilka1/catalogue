@@ -4,12 +4,12 @@ const PATH_TO_GALLERY = "/images/demo/gallery/"
 
 function insert_featured_slide_for_source(genre, sourceNames) {
     $(sourceNames).each(function (i, sourceName) {
-        let pathToSource = PATH_TO_GALLERY + genre + "/" + sourceName.toLowerCase();
+        let pathToSource = PATH_TO_GALLERY + genre + "/" + sourceName;
         let h2Text = normalizeText(sourceName);
 
         $('#featured_slide_Content').append(
             $('<li>').addClass("featured_slide_Image").append(
-                $('<a>').attr('href', "/pages/gallery/" + genre + "/" + sourceName.toLowerCase() + ".html").append(
+                $('<a>').attr('href', "/pages/gallery/" + genre + "/" + sourceName + ".html").append(
                     $('<img>').attr('src', pathToSource + "/homepage.jpeg")
                         .attr('alt', sourceName)),
                 $('<div>').addClass("introtext").append(

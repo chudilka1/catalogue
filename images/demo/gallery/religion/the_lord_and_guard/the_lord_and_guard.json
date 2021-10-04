@@ -1,8 +1,11 @@
 {
-  "title": "The Lord and Guard",
-  "author": "Artist's Name",
-  "size": "100 x 60",
-  "materials": "Oil",
-  "year": 2010,
-  "description": "Description"
+  "sourceName": "the_lord_and_guard",
+  "title": "Господь и стражник",
+  "genre": "religion",
+  "author": "N/A",
+  "size": "80х60",
+  "year": "2021",
+  "materials": "canvas, oil",
+  "description": ".",
+  "price": "2500"
 }

@@ -1,8 +1,11 @@
 {
-  "title": "Bright Night",
-  "author": "Artist's Name",
-  "size": "100 x 80",
-  "materials": "Oil",
-  "year": 2000,
-  "description": "Description"
+  "sourceName": "bright_night",
+  "title": "Светлая ночь",
+  "genre": "landscapes",
+  "author": "Lugovenko Nicholas",
+  "size": "60х100",
+  "year": "2015",
+  "materials": "canvas, oil",
+  "description": ".",
+  "price": "5000"
 }
