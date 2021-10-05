@@ -2,9 +2,8 @@
 
 #featured_slide_ {
     position: relative; /* important */
-    display: block;
-    width: 915px;
-    height: 610px;
+    max-width: 915px;
+    max-height: 610px;
     overflow: hidden; /* important */
     margin: 0 auto;
     padding: 5px;
@@ -14,9 +13,6 @@
 }
 
 #featured_slide_Content {
-    width: 915px; /* important to be same as image width */
-    position: center;
-    display: inline;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -25,11 +21,8 @@
 .featured_slide_Image {
     position: relative;
     display: none;
-    float: left;
     margin: 0;
     padding: 0;
-    width: 915px; /* important - must be same as image width and slider width */
-    height: 610px; /* important - must be same as image height and slider height */
     list-style: none;
 }
 
@@ -40,10 +33,9 @@
 
 .featured_slide_Image div.introtext {
     position: absolute;
-    top: 520px;
-    left: 0;
-    width: 895px;
-    padding: 20px 10px;
+    bottom: 0;
+    min-width: 100%;
+    padding: 20px 0;
     color: #fff;
     background-color: #000;
     text-align: center;

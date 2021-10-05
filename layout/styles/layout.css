@@ -58,7 +58,7 @@ body {
     clear: both;
 }
 
-img.detailsPage  {
+img.detailsPage {
     display: block;
     max-width: 90%;
     max-height: 500px;
@@ -91,10 +91,13 @@ a {
 }
 
 img {
-    display: block;
+    display: inline;
+    max-width: 100%;
     margin: 0;
     padding: 0;
     border: none;
+    position: relative;
+    clear: both;
 }
 
 .imgl, .imgr {
@@ -115,18 +118,36 @@ img {
 /* ----------------------------------------------Wrapper------------------------------------- */
 
 div.wrapper {
-    display: block;
-    width: 100%;
-    margin: 0;
+    display: flex;
+    max-width: 970px;
+    margin: 0 auto;
     text-align: left;
 }
 
+
 div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, div.wrapper h6 {
-    margin: 0 0 15px 0;
     padding: 0;
     font-size: 26px;
     font-weight: normal;
     line-height: normal;
+}
+
+@media all and (max-width: 635px) {
+    div.wrapper.col1 {
+        margin: 0 auto;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+span {
+    display: flex; /*put p in the span in the header*/
 }
 
 .col1 {
@@ -156,30 +177,29 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 /* ----------------------------------------------Generalise------------------------------------- */
 
 #header, #breadcrumb, #container, .gallery, #footer {
-    display: block;
     position: relative;
-    width: 970px;
-    margin: 0 auto;
 }
 
 /* ----------------------------------------------Header------------------------------------- */
 
 #header {
-    padding: 15px 0;
+    flex: 1;
+    min-width: 310px;
+    padding: 10px 0;
     z-index: 1000;
 }
 
 #header .fl_left {
-    display: block;
     float: left;
+    min-width: 310px;
     overflow: hidden;
 }
 
 #header h1, #header p, #header ul {
-    margin: 0;
     padding: 0;
     list-style: none;
     line-height: normal;
+    margin: 0 0 0 5px;
 }
 
 #header h1 a {
@@ -187,7 +207,15 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 }
 
 #header .fl_left p {
+    float: left;
+    overflow: hidden;
+    min-width: 310px;
     margin-top: 5px;
+}
+
+#logo {
+    float: left;
+    margin-right: 5px;
 }
 
 /* ----------------------------------------------BreadCrumb------------------------------------- */
@@ -215,14 +243,21 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 /* ----------------------------------------------Content------------------------------------- */
 
 #container {
+    display: flex;
+    flex-basis: 965px;
+    max-width: 100%;
     padding: 10px 0;
     border-bottom: 1px dotted #666;
 }
 
 #content {
-    display: block;
+    flex: 1;
     float: left;
-    width: 630px;
+    max-width: 660px;
+}
+
+h1#title {
+    margin-top: 0;
 }
 
 /* Comments */
@@ -292,6 +327,8 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 /* ----------------------------------------------Gallery------------------------------------- */
 
 .gallery {
+    flex: 1;
+    max-width: 970px;
     padding: 10px 0 10px 0;
 }
 
@@ -308,7 +345,9 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 }
 
 .gallery ul {
-    display: inline;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -316,8 +355,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 
 .gallery ul li {
     display: block;
-    float: left;
-    margin: 0 10px 10px 0;
+    margin: 0 3px 5px;
 }
 
 .gallery ul li img {
@@ -347,10 +385,6 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
     border: 1px solid #FFFF00;
 }
 
-/*table td.fitwidth {
-    white-space: nowrap;
-}*/
-
 td.fitwidth {
     width: 200px;
     white-space: nowrap;
@@ -359,9 +393,9 @@ td.fitwidth {
 /* ----------------------------------------------Column------------------------------------- */
 
 #column {
+    flex: 2;
     display: block;
-    float: right;
-    width: 300px;
+    max-width: 300px;
 }
 
 #column .holder {
