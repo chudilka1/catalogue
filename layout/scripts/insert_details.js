@@ -39,7 +39,7 @@ function insert_other_authentics(sourceName) {
         .done(function (data) {
             let randomSourceIndex = getRandomSourceIndex(data);
             let randomSource = getRandomSource(data, randomSourceIndex);
-            // get a source that is different from the opened one
+            // get an image (source) that is different from the opened one
             while (equalsIgnoringCase(randomSource, sourceName)) {
                 randomSourceIndex = getRandomSourceIndex(data);
                 randomSource = getRandomSource(data, randomSourceIndex);

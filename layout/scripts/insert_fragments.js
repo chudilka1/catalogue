@@ -1,6 +1,7 @@
-import {normalizeText, setTitle, setGenre, setCollectionName} from "./modules/utility_methods.js";
+import {normalizeText, setTitle, setGenre, setCollectionName, equalsIgnoringCase} from "./modules/utility_methods.js";
 
 const BASE_PATH_TO_GALLERY = "/images/demo/gallery/"
+const BASE_PATH_TO_GALERY_PAGES = "/pages/gallery/"
 
 window.insert_head_common = function insert_head_common() {
     $.get("/pages/head_common.html", function (data) {
@@ -15,7 +16,29 @@ window.insert_head_pretty_photo = function insert_head_pretty_photo() {
 }
 
 window.insert_header = function insert_header() {
-    $(".wrapper.col1").load("/pages/header.html");
+    let genresSet = new Set();
+    $.getJSON(BASE_PATH_TO_GALLERY + "sources.json")
+        .done(function (data) {
+            $(data.sources).each(
+                function (index, value) {
+                    let genre = value[1];
+                    genresSet.add(genre);
+                })
+        })
+        .fail(function () {
+            console.error("No source.json was found");
+        })
+
+    $(".wrapper.col1").load("/pages/header.html",
+        function () {
+            const listOfCatalogueOptionsElement = $("#topnav .last ul");
+            for (const genre of genresSet) {
+                let normalizedGenre = normalizeText(genre);
+                listOfCatalogueOptionsElement.append(
+                    $('<li>').append(
+                        $('<a>').attr('href', BASE_PATH_TO_GALERY_PAGES + genre + "/index.html").text(normalizedGenre)))
+            }
+        });
 }
 
 window.insert_footer = function insert_footer() {
@@ -74,11 +97,36 @@ function populate_gallery_table_for(genre, collectionName) {
         });
 }
 
-window.insert_genre_tiles_for = function insert_genre_tiles_for(genre, sourceNames) {
+window.insert_genre_tiles_for = function insert_genre_tiles_for(genre) {
+    let availableSourceNamesForGenre = null;
+    $.getJSON(BASE_PATH_TO_GALLERY + "sources.json")
+        .done(function (data) {
+            // resolve sources.json to map (genre: [sources])
+            let mappedSources = new Map();
+            $(data.sources).each(
+                function (index, value) {
+                    let linkedGenre = value[1];
+                    let linkedSourceName = value[0];
+                    // add new sourceNames to already existing genres in map
+                    let sourceNamesArr = mappedSources.get(linkedGenre);
+                    if (sourceNamesArr !== undefined && !sourceNamesArr.includes(linkedSourceName)) {
+                        sourceNamesArr.push(linkedSourceName);
+                    } else {
+                        mappedSources.set(linkedGenre, [linkedSourceName]);
+                    }
+                })
+            availableSourceNamesForGenre = Array.from(mappedSources.get(genre));
+        })
+        .fail(function () {
+            console.error("No source.json was found");
+        })
+
     $(".wrapper.col4").load("/pages/genre_tiles.html",
         function () {
+            // set genre for catalogue page
             $('.gallery h2').text(genre);
-            $(sourceNames).each(function (index, sourceName) {
+            // set corresponding images and links to fragments page
+            for (const sourceName of availableSourceNamesForGenre) {
                 let pathToSource = BASE_PATH_TO_GALLERY + genre + "/" + sourceName;
                 $('.gallery ul').append(
                     $('<li>').append(
@@ -86,6 +134,6 @@ window.insert_genre_tiles_for = function insert_genre_tiles_for(genre, sourceNam
                             .attr('title', sourceName).append(
                             $('<img>').attr('src', pathToSource + "/full_174.jpeg")
                                 .attr('alt', sourceName))));
-            })
+            }
         });
 }
