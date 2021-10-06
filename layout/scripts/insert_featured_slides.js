@@ -1,17 +1,32 @@
-import {normalizeText} from "./modules/utility_methods.js";
+import {normalizeText, setCollectionName, setGenre} from "./modules/utility_methods.js";
 
 const PATH_TO_GALLERY = "/images/demo/gallery/"
 
 function insert_featured_slide_for_source(genre, sourceNames) {
     $(sourceNames).each(function (i, sourceName) {
         let pathToSource = PATH_TO_GALLERY + genre + "/" + sourceName;
+        let basePathToGaleryPages = "/pages/gallery/";
         let h2Text = normalizeText(sourceName);
 
         $('#featured_slide_Content').append(
             $('<li>').addClass("featured_slide_Image").append(
-                $('<a>').attr('href', "/pages/gallery/" + genre + "/" + sourceName + ".html").append(
-                    $('<img>').attr('src', pathToSource + "/homepage.jpeg")
-                        .attr('alt', sourceName)),
+                $('<a>')
+                    .attr('href', basePathToGaleryPages + genre + "/" + sourceName + ".html")
+                    .attr('title', sourceName)
+                    .click(function () {
+                        let href = $(this).attr('href');
+                        let slashBehindGalleryWord = href.indexOf('y') + 2;
+                        let shortenedPathToSource = href.slice(slashBehindGalleryWord, href.lastIndexOf('.'));
+                        let targetGenre = shortenedPathToSource.split('/')[0];
+                        let targetSourceName = shortenedPathToSource.split('/')[1];
+                        setGenre(targetGenre);
+                        setCollectionName(targetSourceName);
+                        window.location.href = basePathToGaleryPages + "fragments_page.html";
+                        return false;
+                    })
+                    .append(
+                        $('<img>').attr('src', pathToSource + "/homepage.jpeg")
+                            .attr('alt', sourceName)),
                 $('<div>').addClass("introtext").append(
                     $('<h2>').text(h2Text),
                     $('<p>').text("For more works visit category ").append(

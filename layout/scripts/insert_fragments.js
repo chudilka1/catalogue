@@ -116,24 +116,38 @@ window.insert_genre_tiles_for = function insert_genre_tiles_for(genre) {
                     }
                 })
             availableSourceNamesForGenre = Array.from(mappedSources.get(genre));
+            $(".wrapper.col4").load("/pages/genre_tiles.html",
+                function () {
+                    // set genre for catalogue page
+                    $('.gallery h2').text(genre);
+                    // set corresponding images and links to fragments page
+                    for (const sourceName of availableSourceNamesForGenre) {
+                        let pathToSource = BASE_PATH_TO_GALLERY + genre + "/" + sourceName;
+                        $('.gallery ul').append(
+                            $('<li>').append(
+                                $('<a>')
+                                    .attr('href',  window.location.pathname.replace("index.html", sourceName + ".html"))
+                                    .attr('title', sourceName)
+                                    .click(function () {
+                                        let href = $(this).attr('href');
+                                        let slashBehindGalleryWord = href.indexOf('y') + 2;
+                                        let shortenedPathToSource = href.slice(slashBehindGalleryWord, href.lastIndexOf('.'));
+                                        let targetGenre = shortenedPathToSource.split('/')[0];
+                                        let targetSourceName = shortenedPathToSource.split('/')[1];
+                                        setGenre(targetGenre);
+                                        setCollectionName(targetSourceName);
+                                        let behindGalleryWord = window.location.href.indexOf('y') + 2;
+                                        let pathToFragmentsPage = window.location.href.slice(0, behindGalleryWord);
+                                        window.location.href = pathToFragmentsPage  + "fragments_page.html"; //sourceName + ".html"
+                                        return false;
+                                    })
+                                    .append(
+                                        $('<img>').attr('src', pathToSource + "/full_174.jpeg")
+                                            .attr('alt', sourceName))));
+                    }
+                });
         })
         .fail(function () {
             console.error("No source.json was found");
         })
-
-    $(".wrapper.col4").load("/pages/genre_tiles.html",
-        function () {
-            // set genre for catalogue page
-            $('.gallery h2').text(genre);
-            // set corresponding images and links to fragments page
-            for (const sourceName of availableSourceNamesForGenre) {
-                let pathToSource = BASE_PATH_TO_GALLERY + genre + "/" + sourceName;
-                $('.gallery ul').append(
-                    $('<li>').append(
-                        $('<a>').attr('href', window.location.pathname.replace("index.html", sourceName + ".html"))
-                            .attr('title', sourceName).append(
-                            $('<img>').attr('src', pathToSource + "/full_174.jpeg")
-                                .attr('alt', sourceName))));
-            }
-        });
 }

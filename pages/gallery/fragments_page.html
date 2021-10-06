@@ -2,7 +2,7 @@
 		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<base href="../../../"/>
+	<base href="../../"/>
 	<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
 	<script type="module" src="layout/scripts/modules/utility_methods.js"></script>
 	<script type="module" src="layout/scripts/insert_fragments.js"></script>
@@ -16,7 +16,10 @@
 	<!-- ####################################################################################################### -->
 	<div class="wrapper col4">
 		<script type="module">
-			insert_gallery_thumbnails("animalism", "white_owl");
+			import {getCollectionName, getGenre} from "../../layout/scripts/modules/utility_methods.js";
+			let genre = getGenre();
+			let sourceName = getCollectionName();
+			insert_gallery_thumbnails(getGenre(), getCollectionName());
 		</script>
 	</div>
 	<!-- ####################################################################################################### -->
