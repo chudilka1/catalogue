@@ -1,7 +1,14 @@
-import {getGenre, equalsIgnoringCase, getCollectionName, normalizeText} from "./modules/utility_methods.js";
+import {
+    getGenre,
+    equalsIgnoringCase,
+    getCollectionName,
+    normalizeText,
+    setGenre,
+    setCollectionName
+} from "./modules/utility_methods.js";
 
 const BASE_PATH_TO_GALLERY = "/images/demo/gallery/"
-const BASE_PATH_TO_PAGES = "/pages/gallery/"
+const BASE_PATH_TO_GALLERY_PAGES = "/pages/gallery/"
 
 // access to details page is possible only from gallery page (with fragments)
 // so by this time the arguments should be saved in localStorage
@@ -20,10 +27,16 @@ window.insert_details_page = function insert_details_page() {
         })
         .then(function () {
             let pathToSource = BASE_PATH_TO_GALLERY + getGenre() + "/" + getCollectionName() + "/homepage.jpeg";
-            let pathToFragmentsPage = BASE_PATH_TO_PAGES + getGenre() + "/" + getCollectionName() + ".html";
+            let pathToFragmentsPage = BASE_PATH_TO_GALLERY_PAGES + getGenre() + "/" + getCollectionName() + ".html";
             $('#title').after(
-                $('<a>').attr('href', pathToFragmentsPage).append(
-                    $("<img>").addClass("detailsPage").attr("src", pathToSource))
+                $('<a>').attr('href', pathToFragmentsPage)
+                    .click(function () {
+                        const afterLastSlashRegExp = new RegExp("([^\/]+$)");
+                        window.location.href = window.location.pathname.replace(afterLastSlashRegExp, "fragments_page.html"); //sourceName + ".html"
+                        return false;
+                    })
+                    .append(
+                        $("<img>").addClass("detailsPage").attr("src", pathToSource))
             );
         })
         .then(function () {
@@ -47,10 +60,23 @@ function insert_other_authentics(sourceName) {
 
             let randomGenre = getRandomGenre(data, randomSourceIndex);
             let pathToSource = BASE_PATH_TO_GALLERY + randomGenre + "/" + randomSource + "/full.jpeg";
-            let pathToFragmentsPage = BASE_PATH_TO_PAGES + randomGenre + "/" + randomSource + ".html";
+            let pathToFragmentsPage = BASE_PATH_TO_GALLERY_PAGES + randomGenre + "/" + randomSource + ".html";
             $('p.imgholder').append(
-                $('<a>').attr('href', pathToFragmentsPage).append(
-                    $("<img>").addClass("detailsPage").attr("src", pathToSource).attr("width", "240px")));
+                $('<a>')
+                    .attr('href', pathToFragmentsPage)
+                    .click(function () {
+                        let href = $(this).attr('href');
+                        let slashBehindGalleryWord = href.indexOf('y') + 2;
+                        let shortenedPathToSource = href.slice(slashBehindGalleryWord, href.lastIndexOf('.'));
+                        let targetGenre = shortenedPathToSource.split('/')[0];
+                        let targetSourceName = shortenedPathToSource.split('/')[1];
+                        setGenre(targetGenre);
+                        setCollectionName(targetSourceName);
+                        window.location.href = BASE_PATH_TO_GALLERY_PAGES + "fragments_page.html"; //sourceName + ".html"
+                        return false;
+                    })
+                    .append(
+                        $("<img>").addClass("detailsPage").attr("src", pathToSource).attr("width", "240px")));
             $('p.imgholder + p').text(normalizeText(randomSource));
             $('.readmore a').attr("href", pathToFragmentsPage);
 

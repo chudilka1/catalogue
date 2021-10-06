@@ -46,6 +46,11 @@ window.insert_footer = function insert_footer() {
 }
 
 window.insert_gallery_thumbnails = function insert_gallery_thumbnails(genre, collectionName) {
+    if (genre === undefined || collectionName === undefined) {
+        genre = "animalism";
+        collectionName = "horse_and_cobra";
+    }
+
     let title = normalizeText(collectionName);
 
     setTitle(title);
