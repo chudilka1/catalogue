@@ -31,8 +31,8 @@ window.insert_details_page = function insert_details_page() {
             $('#title').after(
                 $('<a>').attr('href', pathToFragmentsPage)
                     .click(function () {
-                        const afterLastSlashRegExp = new RegExp("([^\/]+$)");
-                        window.location.href = window.location.pathname.replace(afterLastSlashRegExp, "fragments_page.html"); //sourceName + ".html"
+                        const textBetweenLastSlashAndDotRegExp = new RegExp("([^\/]+$)");
+                        window.location.href = window.location.pathname.replace(textBetweenLastSlashAndDotRegExp, "fragments_page.html"); //sourceName + ".html"
                         return false;
                     })
                     .append(
