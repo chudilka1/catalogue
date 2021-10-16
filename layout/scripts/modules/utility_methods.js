@@ -10,7 +10,7 @@ String.prototype.capitalize = function () {
 }
 
 function equalsIgnoringCase(text, textToComapre) {
-    return text.localeCompare(textToComapre, undefined, { sensitivity: 'base' }) === 0;
+    return text.localeCompare(textToComapre, undefined, {sensitivity: 'base'}) === 0;
 }
 
 function setTitle(title) {
@@ -33,4 +33,23 @@ function getCollectionName() {
     return sessionStorage.getItem("collectionName");
 }
 
-export {normalizeText, equalsIgnoringCase, setTitle, setGenre, setCollectionName, getGenre, getCollectionName};
+function set_genre_and_collection_name_from_link(hrefObject) {
+    let href = $(hrefObject).attr('href');
+    let slashBehindGalleryWord = href.indexOf('y') + 2;
+    let shortenedPathToSource = href.slice(slashBehindGalleryWord, href.lastIndexOf('.'));
+    let targetGenre = shortenedPathToSource.split('/')[0];
+    let targetSourceName = shortenedPathToSource.split('/')[1];
+    setGenre(targetGenre);
+    setCollectionName(targetSourceName);
+}
+
+export {
+    normalizeText,
+    equalsIgnoringCase,
+    setTitle,
+    setGenre,
+    setCollectionName,
+    getGenre,
+    getCollectionName,
+    set_genre_and_collection_name_from_link
+};

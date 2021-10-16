@@ -1,4 +1,11 @@
-import {normalizeText, setTitle, setGenre, setCollectionName, equalsIgnoringCase} from "./modules/utility_methods.js";
+import {
+    normalizeText,
+    setTitle,
+    setGenre,
+    setCollectionName,
+    equalsIgnoringCase,
+    set_genre_and_collection_name_from_link
+} from "./modules/utility_methods.js";
 
 const BASE_PATH_TO_GALLERY = "/images/demo/gallery/"
 const BASE_PATH_TO_GALERY_PAGES = "/pages/gallery/"
@@ -102,7 +109,7 @@ function populate_gallery_table_for(genre, collectionName) {
         });
 }
 
-window.insert_genre_tiles_for = function insert_genre_tiles_for(genre) {
+window.insert_genre_fragments_for = function insert_genre_fragments_for(genre) {
     let availableSourceNamesForGenre = null;
     $.getJSON(BASE_PATH_TO_GALLERY + "sources.json")
         .done(function (data) {
@@ -134,16 +141,10 @@ window.insert_genre_tiles_for = function insert_genre_tiles_for(genre) {
                                     .attr('href',  window.location.pathname.replace("index.html", sourceName + ".html"))
                                     .attr('title', sourceName)
                                     .click(function () {
-                                        let href = $(this).attr('href');
-                                        let slashBehindGalleryWord = href.indexOf('y') + 2;
-                                        let shortenedPathToSource = href.slice(slashBehindGalleryWord, href.lastIndexOf('.'));
-                                        let targetGenre = shortenedPathToSource.split('/')[0];
-                                        let targetSourceName = shortenedPathToSource.split('/')[1];
-                                        setGenre(targetGenre);
-                                        setCollectionName(targetSourceName);
+                                        set_genre_and_collection_name_from_link(this);
                                         let behindGalleryWord = window.location.href.indexOf('y') + 2;
                                         let pathToFragmentsPage = window.location.href.slice(0, behindGalleryWord);
-                                        window.location.href = pathToFragmentsPage  + "fragments_page.html"; //sourceName + ".html"
+                                        window.location.href = pathToFragmentsPage  + "fragments_page.html";
                                         return false;
                                     })
                                     .append(

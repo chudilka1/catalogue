@@ -3,8 +3,7 @@ import {
     equalsIgnoringCase,
     getCollectionName,
     normalizeText,
-    setGenre,
-    setCollectionName
+    set_genre_and_collection_name_from_link
 } from "./modules/utility_methods.js";
 
 const BASE_PATH_TO_GALLERY = "/images/demo/gallery/"
@@ -64,22 +63,20 @@ function insert_other_authentics(sourceName) {
             $('p.imgholder').append(
                 $('<a>')
                     .attr('href', pathToFragmentsPage)
+                    .append($("<img>").addClass("detailsPage").attr("src", pathToSource).attr("width", "240px"))
                     .click(function () {
-                        let href = $(this).attr('href');
-                        let slashBehindGalleryWord = href.indexOf('y') + 2;
-                        let shortenedPathToSource = href.slice(slashBehindGalleryWord, href.lastIndexOf('.'));
-                        let targetGenre = shortenedPathToSource.split('/')[0];
-                        let targetSourceName = shortenedPathToSource.split('/')[1];
-                        setGenre(targetGenre);
-                        setCollectionName(targetSourceName);
-                        window.location.href = BASE_PATH_TO_GALLERY_PAGES + "fragments_page.html"; //sourceName + ".html"
+                        set_genre_and_collection_name_from_link(this);
+                        window.location.href = BASE_PATH_TO_GALLERY_PAGES + "fragments_page.html";
                         return false;
-                    })
-                    .append(
-                        $("<img>").addClass("detailsPage").attr("src", pathToSource).attr("width", "240px")));
+                    }));
             $('p.imgholder + p').text(normalizeText(randomSource));
-            $('.readmore a').attr("href", pathToFragmentsPage);
-
+            $('.readmore a')
+                .attr("href", pathToFragmentsPage)
+                .click(function () {
+                    set_genre_and_collection_name_from_link(this);
+                    window.location.href = BASE_PATH_TO_GALLERY_PAGES + "fragments_page.html";
+                    return false;
+                });
         })
         .fail(function () {
             console.error("No source.json was found");

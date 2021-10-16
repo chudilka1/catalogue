@@ -1,4 +1,4 @@
-import {normalizeText, setCollectionName, setGenre} from "./modules/utility_methods.js";
+import {normalizeText, set_genre_and_collection_name_from_link} from "./modules/utility_methods.js";
 
 const PATH_TO_GALLERY = "/images/demo/gallery/"
 
@@ -14,13 +14,7 @@ function insert_featured_slide_for_source(genre, sourceNames) {
                     .attr('href', basePathToGaleryPages + genre + "/" + sourceName + ".html")
                     .attr('title', sourceName)
                     .click(function () {
-                        let href = $(this).attr('href');
-                        let slashBehindGalleryWord = href.indexOf('y') + 2;
-                        let shortenedPathToSource = href.slice(slashBehindGalleryWord, href.lastIndexOf('.'));
-                        let targetGenre = shortenedPathToSource.split('/')[0];
-                        let targetSourceName = shortenedPathToSource.split('/')[1];
-                        setGenre(targetGenre);
-                        setCollectionName(targetSourceName);
+                        set_genre_and_collection_name_from_link(this);
                         window.location.href = basePathToGaleryPages + "fragments_page.html";
                         return false;
                     })
