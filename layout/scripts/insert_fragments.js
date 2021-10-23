@@ -3,7 +3,6 @@ import {
     setTitle,
     setGenre,
     setCollectionName,
-    equalsIgnoringCase,
     set_genre_and_collection_name_from_link
 } from "./modules/utility_methods.js";
 
