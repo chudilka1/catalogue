@@ -86,13 +86,13 @@ body {
   padding: 8px 25px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
 }
 
 .contact.button {
+    line-height: 2.3;
     text-decoration: underline;
     color: #1E1E1E;
     background-color: #FFFF00;

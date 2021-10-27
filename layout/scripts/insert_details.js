@@ -24,13 +24,13 @@ window.insert_details_page = function insert_details_page() {
             let author = $('#author').text(json.author);
             author.html(author.html().replace(startOfLineRegex, "<b style='color:#FFFF00'>Author: </b>"));
 
-            let size = $('#size').text("Size (cm): " + json.size);
-            size.html(size.html().replace(startOfLineRegex, "<b style='color:#FFFF00'>Size: </b>"));
+            let size = $('#size').text(json.size);
+            size.html(size.html().replace(startOfLineRegex, "<b style='color:#FFFF00'>Size (sm): </b>"));
 
-            let materials = $('#materials').text("Materials: " + json.materials);
+            let materials = $('#materials').text(json.materials);
             materials.html(materials.html().replace(startOfLineRegex, "<b style='color:#FFFF00'>Materials: </b>"));
 
-            let year = $('#year').text("Year: " + json.year);
+            let year = $('#year').text(json.year);
             year.html(year.html().replace(startOfLineRegex, "<b style='color:#FFFF00'>Year: </b>"));
 
             let description = $('#description').text(json.description);

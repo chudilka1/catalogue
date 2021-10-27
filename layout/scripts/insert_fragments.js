@@ -3,7 +3,8 @@ import {
     setTitle,
     setGenre,
     setCollectionName,
-    set_genre_and_collection_name_from_link
+    set_genre_and_collection_name_from_link,
+    addContactButton
 } from "./modules/utility_methods.js";
 
 const BASE_PATH_TO_GALLERY = "/images/demo/gallery/"
@@ -68,6 +69,7 @@ window.insert_gallery_thumbnails = function insert_gallery_thumbnails(genre, col
             $(".wrapper.col4 h2").text(title); // change h2 of thumbnails collection
             prepend_gallery_img_source_with_path_to_images(genre, collectionName);
             prepend_gallery_hrefs_with_path_to_images(genre, collectionName);
+            $('.gallery ul').after(addContactButton("/pages/contacts.html"));
             populate_gallery_table_for(genre, collectionName);
             load_pretty_photo();
         });

@@ -1,4 +1,4 @@
-import {normalizeText, set_genre_and_collection_name_from_link} from "./modules/utility_methods.js";
+import {normalizeText, set_genre_and_collection_name_from_link, addContactButton} from "./modules/utility_methods.js";
 
 const PATH_TO_GALLERY = "/images/demo/gallery/"
 
@@ -55,6 +55,8 @@ window.insert_homepage_slides_for = function insert_homepage_slides_for(arrayOfA
             );
             console.debug("Homepage slides inserted")
 
+            $('#featured_slide_').after(addContactButton("/pages/contacts.html"))
+
             load_featured_slide_dependency();
-        })
+        });
 }

@@ -43,6 +43,15 @@ function set_genre_and_collection_name_from_link(hrefObject) {
     setCollectionName(targetSourceName);
 }
 
+function addContactButton(pathToContactsHtml) {
+    return $('<div>').addClass("button").append(
+        $('<a>').addClass("contact button")
+            .attr("href", pathToContactsHtml)
+            .attr("title", "contacts")
+            .text("CONTACT US TO ASK A QUESTION OR TO MAKE AN ORDER")
+    );
+}
+
 export {
     normalizeText,
     equalsIgnoringCase,
@@ -51,5 +60,6 @@ export {
     setCollectionName,
     getGenre,
     getCollectionName,
-    set_genre_and_collection_name_from_link
+    set_genre_and_collection_name_from_link,
+    addContactButton
 };
