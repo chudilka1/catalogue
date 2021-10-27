@@ -14,15 +14,28 @@ const BASE_PATH_TO_GALLERY_PAGES = "/pages/gallery/"
 window.insert_details_page = function insert_details_page() {
     let genre = getGenre();
     let sourceName = getCollectionName();
+    let startOfLineRegex = /^/;
 
     $.getJSON(BASE_PATH_TO_GALLERY + genre + "/" + sourceName + "/" + sourceName + ".json")
-        .done(function (data) {
+        .done(function (json) {
+            // insert details info from painting json
             $('#title').text(normalizeText(sourceName));
-            $('#author').text("Author: " + data.author);
-            $('#size').text("Size (cm): " + data.size);
-            $('#materials').text("Materials: " + data.materials);
-            $('#year').text("Year: " + data.year);
-            $('#description').text("Description: " + data.description);
+            let author = $('#author').text(json.author);
+            author.html(author.html().replace(startOfLineRegex, "<b style='color:#FFFF00'>Author: </b>"));
+
+            let size = $('#size').text("Size (cm): " + json.size);
+            size.html(size.html().replace(startOfLineRegex, "<b style='color:#FFFF00'>Size: </b>"));
+
+            let materials = $('#materials').text("Materials: " + json.materials);
+            materials.html(materials.html().replace(startOfLineRegex, "<b style='color:#FFFF00'>Materials: </b>"));
+
+            let year = $('#year').text("Year: " + json.year);
+            year.html(year.html().replace(startOfLineRegex, "<b style='color:#FFFF00'>Year: </b>"));
+
+            let description = $('#description').text(json.description);
+            description.html(description.html()
+                .replace(startOfLineRegex, "<b style='color:#FFFF00'>Description: </b>")
+                .replace(/\n/g,'<br/>')); // handle new lines
         })
         .then(function () {
             let pathToSource = BASE_PATH_TO_GALLERY + getGenre() + "/" + getCollectionName() + "/homepage.jpeg";
