@@ -14,6 +14,7 @@ const BASE_PATH_TO_GALLERY_PAGES = "/pages/gallery/"
 window.insert_details_page = function insert_details_page() {
     let genre = getGenre();
     let sourceName = getCollectionName();
+    let newLineRegex = /\n/g;
     let startOfLineRegex = /^/;
 
     $.getJSON(BASE_PATH_TO_GALLERY + genre + "/" + sourceName + "/" + sourceName + ".json")
@@ -33,9 +34,20 @@ window.insert_details_page = function insert_details_page() {
             year.html(year.html().replace(startOfLineRegex, "<b style='color:#FFFF00'>Year: </b>"));
 
             let description = $('#description').text(json.description);
+            let pathToContactsPage = "/pages/contacts.html";
             description.html(description.html()
                 .replace(startOfLineRegex, "<b style='color:#FFFF00'>Description: </b>")
-                .replace(/\n/g,'<br/>')); // handle new lines
+                .replace(newLineRegex,'<br/>')
+                .replace("Pay attention:", "<span class='inline' style='color:#FFFF00'>Pay Attention: </span>")
+                .replace("original physical Authentic Painting", "<span class='inline' style='color:#FFFF00'>original physical Authentic Painting</span>")
+            ); // handle new lines
+                //.replace(endOfLineRegex, `<p>If you have questions regarding the paintings or would like to make an order do not hesitate to </p><p><a class="yellow" href=${pathToContactsPage}>CONTACT US</a></p>`));
+            description.append(
+                $('<p>').text("If you have questions regarding the paintings or would like to make an order do not hesitate to ")
+                    .append(
+                        $('<a>').addClass("yellow").addClass("underlined").attr("href", pathToContactsPage).text("CONTACT US")
+                    )
+            );
         })
         .then(function () {
             let pathToSource = BASE_PATH_TO_GALLERY + getGenre() + "/" + getCollectionName() + "/homepage.jpeg";

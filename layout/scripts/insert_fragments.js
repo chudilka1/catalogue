@@ -66,9 +66,9 @@ window.insert_gallery_thumbnails = function insert_gallery_thumbnails(genre, col
     $(".wrapper.col4").load("/pages/gallery/gallery_thumbnails.html",
         function () {
             $(".wrapper.col4 h2").text(title); // change h2 of thumbnails collection
-            populate_gallery_table_for(genre, collectionName);
-            prepend_gallery_hrefs_with_path_to_images(genre, collectionName);
             prepend_gallery_img_source_with_path_to_images(genre, collectionName);
+            prepend_gallery_hrefs_with_path_to_images(genre, collectionName);
+            populate_gallery_table_for(genre, collectionName);
             load_pretty_photo();
         });
 }

@@ -38,6 +38,8 @@ body {
 
 .center {
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .right {
@@ -54,8 +56,46 @@ body {
     color: #FFFF00;
 }
 
+.default_text_color {
+    color: #CCCCCC;
+}
+
+.inline {
+    display: inline;
+}
+
+.left {
+    text-align: left;
+    margin-right: auto;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+.column {
+    flex-direction: column;
+}
+
 .clear {
     clear: both;
+}
+
+.button {
+  border: none;
+  padding: 8px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.contact.button {
+    text-decoration: underline;
+    color: #1E1E1E;
+    background-color: #FFFF00;
 }
 
 img.detailsPage {
@@ -74,7 +114,6 @@ br.clear {
 a {
     outline: none;
     text-decoration: none;
-    color: #FFFF00;
     background-color: #000000;
 }
 

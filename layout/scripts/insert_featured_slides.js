@@ -24,7 +24,7 @@ function insert_featured_slide_for_source(genre, sourceNames) {
                 $('<div>').addClass("introtext").append(
                     $('<h2>').text(h2Text),
                     $('<p>').text("For more works visit category ").append(
-                        $('<a>').attr('href', "/pages/gallery/" + genre + "/index.html").text(genre.capitalize())
+                        $('<a>').addClass("yellow").attr('href', "/pages/gallery/" + genre + "/index.html").text(genre.capitalize())
                     )
                 )
             )
