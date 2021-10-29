@@ -104,9 +104,14 @@ function populate_gallery_table_for(genre, collectionName) {
             $('#size').text(data.size);
             $('#materials').text(data.materials);
             $('#year').text(data.year);
+            $('#nft').append(
+                $('<a>')
+                    .attr('href', data.nftUrl)
+                    .attr('title', 'nft')
+                    .text('Link to NFT'))
         })
         .fail(function () {
-            console.error("No description was found for [" + collectionName + "]");
+            console.error("One of the fields for the table was found for [" + title + "]");
         });
 }
 
@@ -139,13 +144,13 @@ window.insert_genre_fragments_for = function insert_genre_fragments_for(genre) {
                         $('.gallery ul').append(
                             $('<li>').append(
                                 $('<a>')
-                                    .attr('href',  window.location.pathname.replace("index.html", sourceName + ".html"))
+                                    .attr('href', window.location.pathname.replace("index.html", sourceName + ".html"))
                                     .attr('title', sourceName)
                                     .click(function () {
                                         set_genre_and_collection_name_from_link(this);
                                         let behindGalleryWord = window.location.href.indexOf('y') + 2;
                                         let pathToFragmentsPage = window.location.href.slice(0, behindGalleryWord);
-                                        window.location.href = pathToFragmentsPage  + "fragments_page.html";
+                                        window.location.href = pathToFragmentsPage + "fragments_page.html";
                                         return false;
                                     })
                                     .append(

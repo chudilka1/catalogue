@@ -114,7 +114,6 @@ br.clear {
 a {
     outline: none;
     text-decoration: none;
-    background-color: #000000;
 }
 
 .fl_left, .imgl {
@@ -427,6 +426,11 @@ h1#title {
 td.fitwidth {
     width: 200px;
     white-space: nowrap;
+}
+
+#nft a {
+    color: #FFFF00;
+    text-decoration: underline;
 }
 
 /* ----------------------------------------------Column------------------------------------- */
