@@ -1,31 +1,19 @@
 {
   "sources": [
     [
-      "blot",
+      "a_maiden_with_wreath",
+      "portraits"
+    ],
+    [
+      "a_morning_surf",
+      "landscapes"
+    ],
+    [
+      "a_pretty_boy",
       "animalism"
     ],
     [
-      "tanzania",
-      "animalism"
-    ],
-    [
-      "horse_and_cobra",
-      "animalism"
-    ],
-    [
-      "buffy",
-      "animalism"
-    ],
-    [
-      "george",
-      "animalism"
-    ],
-    [
-      "white_owl",
-      "animalism"
-    ],
-    [
-      "on_the_hill",
+      "alex_bella_sherr",
       "portraits"
     ],
     [
@@ -33,39 +21,11 @@
       "portraits"
     ],
     [
-      "alex_bella_sherr",
-      "portraits"
-    ],
-    [
-      "morning_mood",
-      "portraits"
-    ],
-    [
-      "nearby_samovar",
-      "portraits"
-    ],
-    [
-      "blue_plastic_bag",
+      "apples",
       "still-life"
     ],
     [
-      "night_lights",
-      "landscapes"
-    ],
-    [
-      "bright_night",
-      "landscapes"
-    ],
-    [
-      "on_the_village_edge",
-      "landscapes"
-    ],
-    [
-      "sunny_day",
-      "landscapes"
-    ],
-    [
-      "the_first_snow",
+      "autumn_in_mountains",
       "landscapes"
     ],
     [
@@ -73,35 +33,35 @@
       "fantasy"
     ],
     [
-      "cinderella",
-      "fantasy"
-    ],
-    [
-      "paul_mcCartney",
-      "portraits"
-    ],
-    [
-      "garbo",
-      "portraits"
-    ],
-    [
-      "john_the_baptist",
-      "religion"
-    ],
-    [
-      "the_lord_and_guard",
-      "religion"
-    ],
-    [
       "big_shell",
       "still-life"
     ],
     [
-      "flowers_symphony",
+      "blot",
+      "animalism"
+    ],
+    [
+      "blue_plastic_bag",
       "still-life"
     ],
     [
-      "jasmine_scent",
+      "bright_night",
+      "landscapes"
+    ],
+    [
+      "buffy",
+      "animalism"
+    ],
+    [
+      "cinderella",
+      "fantasy"
+    ],
+    [
+      "essex_frigate",
+      "landscapes"
+    ],
+    [
+      "flowers_symphony",
       "still-life"
     ],
     [
@@ -109,51 +69,27 @@
       "cars"
     ],
     [
-      "rider",
-      "fantasy"
-    ],
-    [
-      "a_maiden_with_wreath",
+      "garbo",
       "portraits"
     ],
     [
-      "a_pretty_boy",
+      "george",
       "animalism"
     ],
     [
-      "summer_landscape",
-      "landscapes"
-    ],
-    [
-      "apples",
-      "still-life"
-    ],
-    [
-      "still_life",
-      "still-life"
-    ],
-    [
-      "one_summer_day",
-      "landscapes"
-    ],
-    [
-      "autumn_in_mountains",
-      "landscapes"
-    ],
-    [
-      "peacock",
+      "horse_and_cobra",
       "animalism"
     ],
     [
-      "morning_voyage",
-      "landscapes"
+      "jasmine_scent",
+      "still-life"
     ],
     [
-      "the_old_town",
-      "landscapes"
+      "john_the_baptist",
+      "religion"
     ],
     [
-      "a_morning_surf",
+      "morning",
       "landscapes"
     ],
     [
@@ -161,16 +97,164 @@
       "still-life"
     ],
     [
-      "morning",
+      "morning_mood",
+      "portraits"
+    ],
+    [
+      "morning_voyage",
       "landscapes"
     ],
     [
-      "essex_frigate",
+      "nearby_samovar",
+      "portraits"
+    ],
+    [
+      "night_lights",
+      "landscapes"
+    ],
+    [
+      "on_the_hill",
+      "portraits"
+    ],
+    [
+      "on_the_village_edge",
+      "landscapes"
+    ],
+    [
+      "one_summer_day",
+      "landscapes"
+    ],
+    [
+      "paul_mcCartney",
+      "portraits"
+    ],
+    [
+      "peacock",
+      "animalism"
+    ],
+    [
+      "rider",
+      "fantasy"
+    ],
+    [
+      "still_life",
+      "still-life"
+    ],
+    [
+      "summer_landscape",
+      "landscapes"
+    ],
+    [
+      "sunny_day",
+      "landscapes"
+    ],
+    [
+      "tanzania",
+      "animalism"
+    ],
+    [
+      "the_first_snow",
+      "landscapes"
+    ],
+    [
+      "the_lord_and_guard",
+      "religion"
+    ],
+    [
+      "the_old_town",
       "landscapes"
     ],
     [
       "the_price_of_freedom",
       "fantasy"
+    ],
+    [
+      "white_owl",
+      "animalism"
+    ],
+    [
+      "a_beautiful_white",
+      "still-life"
+    ],
+    [
+      "a_breath_of_spring",
+      "still-life"
+    ],
+    [
+      "alfa_romeo_sprint",
+      "cars"
+    ],
+    [
+      "cat_girl_milk",
+      "fantasy"
+    ],
+    [
+      "cord_1931",
+      "cars"
+    ],
+    [
+      "i_am_your_gift",
+      "fantasy"
+    ],
+    [
+      "innocente",
+      "fantasy"
+    ],
+    [
+      "italu_vence",
+      "landscapes"
+    ],
+    [
+      "leben_ist_gut",
+      "portraits"
+    ],
+    [
+      "life_is_a_game",
+      "fantasy"
+    ],
+    [
+      "little_enchantress",
+      "fantasy"
+    ],
+    [
+      "lonely_maiden",
+      "portraits"
+    ],
+    [
+      "malva",
+      "still-life"
+    ],
+    [
+      "new_york",
+      "landscapes"
+    ],
+    [
+      "poppies",
+      "still-life"
+    ],
+    [
+      "red_apples",
+      "still-life"
+    ],
+    [
+      "snow_leopard",
+      "animalism"
+    ],
+    [
+      "still_life_inspired_by_coffee",
+      "still-life"
+    ],
+    [
+      "the_first_meeting",
+      "animalism"
+    ],
+    [
+      "the_present",
+      "fantasy"
+    ],
+    [
+      "white_lilies",
+      "still-life"
     ]
   ]
 }

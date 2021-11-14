@@ -35,19 +35,25 @@ window.insert_details_page = function insert_details_page() {
 
             let description = $('#description').text(json.description);
             let pathToContactsPage = "/pages/contacts.html";
+            description
+                .append($('<p>').text(
+                    "This artwork took part in several art festivals and exhibitions approved by corresponding certificates and galleries art catalogues."))
+                .append($('<p>').text(
+                    "Pay attention: Upon buying the digitalized copy of this masterpiece in Ultra HD 1:1 resolution, you will receive the original physical Authentic Painting."))
+                .append(
+                    $('<p>').text("If you have questions regarding the paintings or would like to make an order do not hesitate to ")
+                        .append(
+                            $('<a>').addClass("yellow").addClass("underlined").attr("href", pathToContactsPage).text("CONTACT US")
+                        )
+                );
             description.html(description.html()
                 .replace(startOfLineRegex, "<b style='color:#FFFF00'>Description: </b>")
-                .replace(newLineRegex,'<br/>')
+                .replace(newLineRegex, '<br/>')
+                .replace("Guiness", "<span class='inline' style='color:#FFFF00'>Guiness </span>")
                 .replace("Pay attention:", "<span class='inline' style='color:#FFFF00'>Pay Attention: </span>")
                 .replace("original physical Authentic Painting", "<span class='inline' style='color:#FFFF00'>original physical Authentic Painting</span>")
-            ); // handle new lines
-                //.replace(endOfLineRegex, `<p>If you have questions regarding the paintings or would like to make an order do not hesitate to </p><p><a class="yellow" href=${pathToContactsPage}>CONTACT US</a></p>`));
-            description.append(
-                $('<p>').text("If you have questions regarding the paintings or would like to make an order do not hesitate to ")
-                    .append(
-                        $('<a>').addClass("yellow").addClass("underlined").attr("href", pathToContactsPage).text("CONTACT US")
-                    )
-            );
+            ) // handle new lines
+            //.replace(endOfLineRegex, `<p>If you have questions regarding the paintings or would like to make an order do not hesitate to </p><p><a class="yellow" href=${pathToContactsPage}>CONTACT US</a></p>`));
         })
         .then(function () {
             let pathToSource = BASE_PATH_TO_GALLERY + getGenre() + "/" + getCollectionName() + "/homepage.jpeg";
